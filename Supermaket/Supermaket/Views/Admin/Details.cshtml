@@ -1,0 +1,83 @@
+﻿@model Supermaket.DB.HANGHOA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HANGHOA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENHANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENHANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIABAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIABAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIANHAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIANHAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOLUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOLUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIOITHIEUSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOITHIEUSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHOMHANG.TENNHOMHANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHOMHANG.TENNHOMHANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHASANXUAT.TENNSX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHASANXUAT.TENNSX)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MAHANG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

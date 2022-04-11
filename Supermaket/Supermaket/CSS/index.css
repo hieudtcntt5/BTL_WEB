@@ -1,0 +1,128 @@
+.navbar-expand-lg{
+    background-color: red !important;
+}
+.header_logo{
+    width: 150px;
+}
+.form-control{
+    width: 500px !important;
+}
+.d-flex{
+    position: relative;
+}
+.btn-outline-success{
+    position: absolute;  
+    left: 450px;
+    height: 35px;
+}
+.header_icon{
+    color: white;
+    background-color: red;
+    border: none;
+    outline: none;
+}
+.header_icon:hover,.header_icon:focus{
+    outline: none;
+}
+.header_imageicon{
+    color: white;
+    margin-right: 8px;
+    
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: red;
+}
+.justify-content-end{
+    margin-top: 0 !important;
+}
+.navbar{
+    margin-bottom: 0px !important;
+}
+.header_buttonmenu{
+    border: none;
+    background-color: white;
+    margin-top: 8px;
+    outline: none;
+}
+/* .header_buttonmenu:hover,.header_buttonmenu:focus{
+    outline: none;
+} */
+.header_menu:hover .element_menu{
+    display: block;
+}
+.header_menu:hover .header_buttonmenu{
+    display: none;
+}
+.dropdown-content{
+    margin-left: 0px !important;
+}
+.dropdown_item{
+    list-style: none;
+    padding: 5px 0;
+    padding-left: 15px;
+    width: 220px;
+
+}
+.dropdown_item:hover{
+    color: white;
+    background-color: red;
+}
+.element_menu{
+    margin: 0px;
+    display: none;
+    position: fixed;
+    z-index: 99;
+    background-color: white;
+    color: black;
+    
+}
+hr{
+    margin-top: 0px !important;
+    margin-bottom: 5px !important;
+}
+.card{
+    position: relative;
+    margin-left: 0px !important;
+    background-color: white;
+}
+.percent_discount{
+   position: absolute;
+   top: 5px;
+   left: 10px;
+   padding: 2px 4px;
+   background-color: red;
+   color: white;
+   border-radius: 4px;
+
+}
+.price{
+    text-decoration: line-through;
+}
+.btn-outline-danger{
+    margin-left: 10% !important;
+}
+.card-body{
+    margin-left: 20px !important;
+}
+.category{
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.divide{
+    color: red;
+    background-color: red;
+}
+.solutions{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+}
+

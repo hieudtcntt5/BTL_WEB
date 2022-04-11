@@ -1,0 +1,41 @@
+﻿@model Supermaket.DB.HANGHOA
+
+@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/HTMLfile/Index.cshtml";
+}
+
+<br />
+<div class="row bg-danger">
+    <p class="text-white" style="padding: 10px 0; ">@Url.Content("Trang chủ > " + @Model.TENHANG)</p>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-5">
+        <img src="@Url.Content("~/Images/Product/"+@Model.ANH) " style="width: 100%;" alt="">
+    </div>
+    <div class="col-md-7">
+        <h4>@Model.TENHANG</h4>
+        <a href="">Hãy là người đầu tiên nhận xét sản phẩm này</a>
+        <p>SKU: 10018694</p>
+        <br>
+        <p>Giá niêm yết <span style="margin-left: 15%; text-decoration:line-through;">@Model.GIABAN</span></p>
+        <p>Giá khuyến mãi <span style="margin-left: 12%;">@Model.GIANHAP</span></p>
+        <p>Tình trạng  <span style="margin-left: 17%;">Còn hàng</span></p>
+        <p>Vận chuyển  <span style="margin-left: 15%;">Giao nhanh trong vòng 2-4 tiếng </span></p>
+        <p>Số lượng    <button id="product_sub">-</button><button id="product_val">1</button><button id="product_sum">+</button></p>
+        <br>
+        <button class="btn btn-danger">MUA NGAY</button>
+        <button class="btn btn-danger">THÊM VÀO GIỎ</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h4 class="bg-danger text-white" style="padding: 15px 0;">@Url.Content("Mô tả sản phẩm " + @Model.TENHANG)</h4>
+        <img src="@Url.Content("~/Images/Product/"+Model.ANH)" style="width:30%;margin-left: 30%;" alt="">
+        <p>@Model.GIOITHIEUSP</p>
+    </div>
+</div>
+
+@Html.ActionLink("Back to List", "Index")
+

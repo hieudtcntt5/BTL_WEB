@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Supermaket.DB.HANGHOA>
+
+@{
+    ViewBag.Title = "ChiTietNhomHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ChiTietNhomHang</h2>
+
+<button class="btn btn-success">
+    @Html.ActionLink("+ Thêm mới", "ThemMoiHangHoa")
+</button>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENHANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIABAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIANHAP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOLUONG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITHIEUSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NHOMHANG.TENNHOMHANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NHASANXUAT.TENNSX)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENHANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIABAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIANHAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOLUONG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITHIEUSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NHOMHANG.TENNHOMHANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NHASANXUAT.TENNSX)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MAHANG }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MAHANG }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MAHANG })
+        </td>
+    </tr>
+}
+
+</table>

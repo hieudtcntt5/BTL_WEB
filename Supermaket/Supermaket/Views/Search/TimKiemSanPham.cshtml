@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "TimKiemSanPham";
+    Layout = "~/Views/HTMLfile/Index.cshtml";
+}
+@using Supermaket.DB
+@using PagedList.Mvc
+@model PagedList.IPagedList<HANGHOA>
+
+
+<br />
+<div class="row bg-danger" style="margin: 5px 0;">
+    <h2 class="text-white">@ViewBag.tt</h2>
+</div>
+<br />
+<div class="row">
+
+    @{ var i = 0;
+        foreach (var item in Model)
+        {
+            i++;
+            var gia = @item.GIABAN * 0.71;
+            <div class="col-md-3">
+                <div class="card" style="width: 100%;">
+                    <img src="@Url.Content("~/Images/Product/"+item.ANH)" style="height:250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.TENHANG</h5>
+                        <p class="card-text">ĐVT: Cái</p>
+                        <p class="price_discount">@gia</p>
+                        <p class="price">@item.GIABAN</p>
+                        <button type="button" class="btn btn-outline-danger">Thêm vào giỏ hàng</button>
+                        <span class="percent_discount">-29%</span>
+                    </div>
+                </div>
+            </div>
+            if (i % 4 == 0)
+            {
+                <br />
+                <div style="clear:both"></div> }
+        }
+    }
+</div>
+
+<div class="w3-center w3-padding-32 text-center">
+    <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+        </a>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@using Supermaket.DB;
+@model List<NHOMHANG>
+
+
+@{ foreach (var item in Model)
+    {
+    <a href="@Url.Action("ChiTietNhomHang","PageUser",new { @ma = item.MANHOMHANG})" style="text-decoration:none"> <li class="dropdown_item">@item.TENNHOMHANG</li></a>
+       
+    }
+}

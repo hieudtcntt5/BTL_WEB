@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSSfile/product.css">
+    <link rel="stylesheet" href="/CSSfile/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" data-auto-replace-svg="nest"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img class="header_logo" src="/Images/logo.png" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @using (Html.BeginForm("TimKiemSanPham", "Search", FormMethod.Post))
+                    {
+                        <form class="d-flex">
+                            <input class="form-control me-2" name="search_pageuser" type="search" placeholder="Nhập tên sản phẩm , mã sản phẩm , từ khóa cần tìm ..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><img src="/Images/icons8-search-24.png" alt=""></button>
+                        </form>
+                    }
+
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/HTMLfile/login.html"><Button class="header_icon"><i class="fa fa-user-circle header_imageicon fa-2x" aria-hidden="true"></i>Tài khoản</Button></a>
+                        <a class="nav-link" href="#"><Button class="header_icon"><i class="fa fa-cart-arrow-down header_imageicon fa-2x" aria-hidden="true"></i>Giỏ hàng</Button></a>
+                        <a class="nav-link disabled"><Button class="header_icon"><i class="fa fa-location-arrow header_imageicon fa-2x" aria-hidden="true"></i>TP.Hà Nội</Button></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 header_menu">
+                <div class="dropdown"><button class="header_buttonmenu"> <i class="fas fa-bars fa-lg">      Danh mục sản phẩm</i></button></div>
+                <div class="element_menu">
+                    @Html.Action("HienThiNhomHang", "Admin")
+                </div>
+            </div>
+            <div class="col-md-8">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-caret-down"></i>Sản phẩm đã xem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Tin tức WinMart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-headset"></i>Tư vấn mua hàng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3  solutions">
+                <img src="/Images/Solution/162964655378716287682220181 (1).png" alt="">
+                <p>Sản Phẩm an toàn</p>
+            </div>
+            <div class="col-md-3  solutions">
+                <img src="/Images/Solution/162964658411816287682628462 (1).png" alt="">
+                <p>Chất lượng cam kết</p>
+            </div>
+            <div class="col-md-3  solutions">
+                <img src="/Images/Solution/162964661464516287682943943 (1).png" alt="">
+                <p>Dịch vụ vượt trội</p>
+            </div>
+            <div class="col-md-3 solutions">
+                <img src="/Images/Solution/162964665580516292779811154 (1).png" alt="">
+                <p>Giao hàng nhanh</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-3">
+                    <img src="/Images/footer.png" style="width: 100%;height: 100%;margin-left: 0%;" alt="">
+                </div>
+                <div class="col-md-3">
+                    <h4>Về chúng tôi</h4>
+                    <p>Giới thiệu về WinMart</p>
+                    <p>Danh sách cửa hàng</p>
+                    <p>Quản lí chất lượng</p>
+                    <p>Chính sách bảo mật và chia sẻ thông tin</p>
+                    <p>Điều khoản và điều kiện giao dịch</p>
+                </div>
+                <div class="col-md-3 ">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <p>Trung tâm hỗ trợ khách hàng</p>
+                    <p>Chính sách giao hàng</p>
+                    <p>Chính sách thanh toán</p>
+                    <p>Chính sách đổi trả</p>
+                    <p>Chính sách chiết khấu ưu đãi mua sắm</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Chăm sóc khách hàng</h4>
+                    <p>Mua Online : 0247 1066866</p>
+                    <p>Email: csk@winmart.masanggroup.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/JSfile/product.js"></script>
+</body>
+</html>

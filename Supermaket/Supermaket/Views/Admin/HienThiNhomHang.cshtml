@@ -1,0 +1,16 @@
+﻿
+@using Supermaket.DB
+@model List<NHOMHANG>
+
+@{foreach (var item in Model)
+    {
+        <li class="nav-item hover_menu" >
+            <a class="nav-link" href="@Url.Action("ChiTietNhomHang","Admin",new { @ma = item.MANHOMHANG})">
+                <i class="fas fa-fw fa-table"></i>
+                <span >@item.TENNHOMHANG</span>
+            </a>
+        </li>
+    }
+}
+
+
